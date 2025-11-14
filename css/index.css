@@ -1,0 +1,370 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scrollbar-color: var(--gray) transparent;
+  font-family: var(--default-font);
+}
+::selection {
+  background: var(--transparency);
+  color: var(--primary);
+}
+.link-elements {
+  border-radius: 8px;
+}
+a.link-elements {
+  border-radius: 20px;
+  background: linear-gradient(to bottom, transparent, var(--black));
+}
+button,
+input,
+.link-elements {
+  outline: 3px solid transparent;
+  transition: outline 0.3s ease;
+}
+.e-link-elements {
+  outline: 3px solid transparent;
+}
+button:focus-visible,
+input:focus-visible,
+.link-elements:focus-visible,
+.e-link-elements:focus-visible {
+  outline: 3px solid var(--primary-transparent);
+}
+/* fonts */
+@font-face {
+  font-family: "RedditSans";
+  src: url("/assets/fonts/reddit/RedditSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpiritFont2";
+  src: url("/assets/fonts/KaliebLuxuryDemo-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpiritFont";
+  src: url("/assets/fonts/ImperialScript-Regular.ttf") format("TrueType");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpiritCode";
+  src: url("/assets/fonts/jetbrains/JetBrainsMono-Bold.ttf") format("TrueType");
+  font-weight: 100 900;
+  font-display: swap;
+}
+/* root */
+:root {
+  /* FFF/000 colors */
+  --white: #cacaca;
+  --black: #000;
+  /* typography colors */
+  --text: #b4b4b4;
+  --gray: #979797;
+  /* solid */
+  --solid: #080808;
+  --solid-sec: #121212;
+  /* secondary hover/focus colors */
+  --secondary-hover: #ffffff14;
+  --secondary-focus: #ffffff25;
+  /* primary colors */
+  --primary: #ffffff;
+  --primary-shade: #bababa;
+  --transparency: #232323;
+  /* colors */
+  --good: #6fda5a;
+  --bad: #e24034;
+  --warning: #eea148;
+  --link: #0084ff;
+  /* fonts */
+  --default-font: "RedditSans", sans-serif;
+  --spirit-font: "SpiritFont", sans-serif;
+  --spirit-code: "SpiritCode", sans-serif;
+}
+/* body */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  background: var(--black);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+/* ========================================================== */
+/*                                                            */
+/*     Base Styles (Typography, Buttons, Links, Commands)     */
+/*                                                            */
+/* ========================================================== */
+img,
+svg {
+  pointer-events: none;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+/* Border Radius */
+.br-full {
+  border-radius: 1000px;
+}
+.br-corner {
+  border-radius: 20px;
+}
+.br-inside {
+  border-radius: 15px;
+}
+.br-default {
+  border-radius: 13px;
+}
+.br-md {
+  border-radius: 9px;
+}
+
+/* Background */
+.bg-default {
+  background: var(--solid);
+  border: 1px solid var(--secondary-hover);
+}
+.btn-hover:hover {
+  background: var(--secondary-hover);
+}
+.bg-opposite {
+  background: var(--black);
+  border: 1px solid var(--secondary-hover);
+}
+.bg-opposite.hover:hover {
+  background: var(--transparency);
+}
+.bg-main {
+  background: var(--main-background);
+  border: none;
+}
+.bg-main.hover:hover {
+  background: var(--transparency);
+}
+.bg-primary {
+  background: var(--primary);
+}
+.bg-primary:hover {
+  background: var(--primary-shade);
+}
+.bg-sec {
+  background: var(--color);
+}
+.bg-sec:hover {
+  background: var(--color-shade);
+}
+.bg-clear {
+  background: var(--hover);
+  border: 1px solid var(--secondary-hover);
+}
+.bg-clear.hover:hover {
+  background: var(--focus);
+}
+.bg-shadow {
+  background: var(--shadow);
+  border: 1px solid var(--focus);
+}
+
+/* Typography */
+.typ-main {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text);
+}
+.typ-main.sm {
+  font-size: 12px;
+}
+.typ-main.black {
+  color: var(--black);
+}
+.typ-main.gray {
+  color: var(--gray);
+}
+.typ-main.white {
+  color: var(--white);
+}
+.typ-main.center {
+  text-align: center;
+}
+.typ-main.left {
+  text-align: left;
+}
+.typ-main.uppercase {
+  text-transform: uppercase;
+}
+.typ-main.capitalize {
+  text-transform: capitalize;
+}
+
+/* transitions */
+.trans-hs {
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+/* pointer events */
+.pe-none {
+  pointer-events: none;
+}
+
+/* default button */
+button,
+div.fbtn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease, transform;
+}
+/* main */
+main {
+  position: fixed;
+  background: var(--main-background);
+  padding: 0 120px;
+  box-shadow: inset 0 0 20px var(--hover);
+  z-index: -1;
+  animation: intro 0.2s ease-in-out forwards;
+  transition: width 0.3s ease, left 0.3s ease, right 0.3s ease, top 0.3s ease,
+    bottom 0.3s ease;
+  will-change: width, left, right, top, bottom;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+[data-nav-position="top"] nav {
+  top: 0;
+}
+[data-nav-position="bottom"] nav {
+  bottom: 0;
+}
+
+[data-nav-position="top"] .notification-center {
+  top: 60px;
+}
+[data-nav-position="bottom"] .notification-center {
+  bottom: 60px;
+}
+
+[data-nav-position="bottom"] .profile-button {
+  margin-bottom: 0;
+}
+
+[data-sidebar-position="left"] .sidebar {
+  left: 0;
+}
+[data-sidebar-position="right"] .sidebar {
+  right: 0;
+}
+
+[data-nav-position="bottom"] .sidebar {
+  padding-bottom: 0;
+}
+
+[data-nav-position="top"] main,
+[data-nav-position="top"] .sidebar {
+  top: 50px;
+  height: calc(100% - 50px);
+}
+[data-nav-position="bottom"] main,
+[data-nav-position="bottom"] .sidebar {
+  bottom: 50px;
+  height: calc(100% - 50px);
+}
+
+[data-sidebar-position="left"] main {
+  left: 220px;
+  width: calc(100% - 220px);
+}
+[data-sidebar-position="right"] main {
+  right: 220px;
+  width: calc(100% - 220px);
+}
+
+[data-nav-position="top"] {
+  --main-border-edge: border-top;
+}
+[data-nav-position="bottom"] {
+  --main-border-edge: border-bottom;
+}
+[data-sidebar-position="left"] {
+  --main-border-side: border-left;
+  --main-radius-corner: border-top-left-radius;
+  --main-radius-corner-alt: border-bottom-left-radius;
+}
+[data-sidebar-position="right"] {
+  --main-border-side: border-right;
+  --main-radius-corner: border-top-right-radius;
+  --main-radius-corner-alt: border-bottom-right-radius;
+}
+
+main {
+  border: 1px solid transparent;
+}
+[data-nav-position="top"] main {
+  border-top: 1px solid var(--secondary-hover);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+[data-nav-position="bottom"] main {
+  border-bottom: 1px solid var(--secondary-hover);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+[data-sidebar-position="left"] main {
+  border-left: 1px solid var(--secondary-hover);
+}
+[data-sidebar-position="right"] main {
+  border-right: 1px solid var(--secondary-hover);
+}
+[data-nav-position="top"][data-sidebar-position="left"] main {
+  border-top-right-radius: 0;
+}
+[data-nav-position="top"][data-sidebar-position="right"] main {
+  border-top-left-radius: 0;
+}
+[data-nav-position="bottom"][data-sidebar-position="left"] main {
+  border-bottom-right-radius: 0;
+}
+[data-nav-position="bottom"][data-sidebar-position="right"] main {
+  border-bottom-left-radius: 0;
+}
+
+[data-sidebar-position="left"] main.minimized {
+  left: 63px;
+  width: calc(100% - 63px);
+}
+[data-sidebar-position="right"] main.minimized {
+  right: 63px;
+  width: calc(100% - 63px);
+}
+
+aside,
+div.items,
+nav {
+  animation: intro 0.3s ease-in-out forwards;
+}
+@keyframes intro {
+  from {
+    opacity: 0;
+    transition: none;
+  }
+  to {
+    opacity: 1;
+    transition: width 0.2s ease;
+  }
+}
+.hs-transitions {
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+.hs-default {
+  opacity: 0;
+  transform: perspective(800px) rotateX(10deg);
+  pointer-events: none;
+}

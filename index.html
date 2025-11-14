@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- favicon -->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <!-- fonts -->
+    <link
+      rel="preload"
+      href="./assets/fonts/reddit/RedditSans-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/KaliebLuxuryDemo-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/ImperialScript-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/Kapakana-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" as="image" href="/assets/images/spirit-logo.png" />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- title -->
+    <title>Spiritual Drop | Recieve And Send</title>
+  </head>
+  <body>
+    <script type="module">
+      // Check authentication
+      const userContext = localStorage.getItem("userContext");
+      if (!userContext) {
+        window.location.href = "./auth/auth.html";
+      } else {
+        const user = JSON.parse(userContext);
+        // Render user info (example)
+        document.body.innerHTML = `
+          <div class="flex flex-col items-center justify-center min-h-screen bg-[var(--solid)]">
+            <img src="${
+              user.photo
+            }" alt="Profile" class="rounded-full w-32 h-32 mb-4" />
+            <h2 class="text-3xl font-bold text-[var(--primary)] mb-2">${
+              user.name || "No Name"
+            }</h2>
+            <p class="text-lg text-[var(--white)] mb-2">${user.email}</p>
+            <p class="text-sm text-[var(--white)]">UID: ${user.uid}</p>
+          </div>
+        `;
+      }
+    </script>
+  </body>
+</html>

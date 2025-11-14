@@ -1,0 +1,148 @@
+@media only screen and (max-width: 1443px) {
+  .auth-main {
+    padding: 110px 100px;
+  }
+}
+@media only screen and (max-width: 1212px) {
+  .auth-main {
+    padding: 40px 100px;
+  }
+  .auth-main {
+    flex-direction: column;
+  }
+  .header {
+    justify-content: center;
+  }
+  .header-wrapper p {
+    text-align: center;
+  }
+  .providers-wrapper {
+    padding-bottom: 10px;
+  }
+  .providers svg {
+    width: 50px;
+    height: 50px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    background: var(--black);
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1006px) {
+  .auth-main {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 813px) {
+  .auth-main {
+    padding: 40px 50px;
+  }
+  .text-wrapper {
+    width: 100%;
+  }
+  .providers-wrapper {
+    width: 100%;
+  }
+  .header {
+    justify-content: start;
+  }
+  .header-wrapper p {
+    text-align: start;
+  }
+}
+@media only screen and (max-width: 508px) {
+  .header-wrapper {
+    width: 100%;
+  }
+  .header {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header h1 {
+    font-size: 50px;
+  }
+  .sub-title-wrapper {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .header-wrapper p {
+    width: 240px;
+    font-size: 13px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 387px) {
+  .header img {
+    width: 40px;
+    height: 40px;
+  }
+  .header h1 {
+    font-size: 40px;
+  }
+  .footer p {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 333px) {
+  .auth-main {
+    padding: 40px 20px;
+  }
+  .header img {
+    width: 36px;
+    height: 36px;
+  }
+  .header h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 270px) {
+  .auth-main {
+    padding: 40px 10px;
+  }
+  .header img {
+    width: 32px;
+    height: 32px;
+  }
+  .header h1 {
+    font-size: 30px;
+  }
+  .header-wrapper p {
+    font-size: 12px;
+  }
+  .providers-wrapper {
+    align-items: center;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+  }
+  .providers-container {
+    height: 100px;
+  }
+  .providers svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+@media only screen and (max-width: 194px) {
+  .auth-main {
+    padding: 40px 10px;
+  }
+  .header img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+  }
+  .header h1 {
+    font-size: 26px;
+  }
+  .header-wrapper p {
+    font-size: 10px;
+  }
+}
