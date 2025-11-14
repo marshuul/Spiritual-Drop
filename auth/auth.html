@@ -44,41 +44,55 @@
   </head>
   <body>
     <main
-      class="auth-main w-full h-full items-center justify-between flex px-[200px] py-[110px] transition-[padding] duration-150"
+      class="auth-main w-full min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-[100px] lg:px-[200px] py-10 md:py-[110px] transition-[padding] duration-150"
     >
-      <div class="text-wrapper w-1/2 h-full">
-        <div class="w-full h-1/2 items-start justify-start flex">
-          <div class="header-wrapper">
-            <div class="header w-auto h-full items-center justify-start flex">
+      <div
+        class="text-wrapper w-full md:w-1/2 h-full flex flex-col justify-between"
+      >
+        <div
+          class="w-full flex-1 flex items-start justify-start md:justify-start"
+        >
+          <div class="header-wrapper w-full">
+            <div
+              class="header w-full h-full flex items-center md:justify-start justify-center"
+            >
               <img
                 src="../assets/images/spirit-logo.png"
                 alt="spirit logo"
-                class="w-[48px] h-[48px] mr-[12px]"
+                class="w-12 h-12 md:w-[48px] md:h-[48px] mr-3 md:mr-[12px]"
               />
               <h1
-                class="text-[60px] text-[var(--primary)] font-[500]"
+                class="text-4xl md:text-[60px] text-[var(--primary)] font-[500]"
                 style="font-family: var(--spirit-font)"
               >
                 Welcome To Spirit
               </h1>
             </div>
-            <div class="sub-title-wrapper">
-              <p class="text-[15px] text-[var(--white)] font-[500]">
+            <div
+              class="sub-title-wrapper w-full flex items-center md:items-start justify-center md:justify-start"
+            >
+              <p
+                class="text-sm md:text-[15px] text-[var(--white)] font-[500] text-center md:text-left"
+              >
                 Login to your account, to start sending & receiving from
                 Spiritual Drop
               </p>
             </div>
           </div>
         </div>
-        <div class="footer w-full h-1/2 items-end justify-start flex">
-          <p class="text-[13px] text-[var(--white)] font-[500]">
+        <div
+          class="footer w-full flex items-end justify-center md:justify-start"
+        >
+          <p class="text-xs md:text-[13px] text-[var(--white)] font-[500]">
             Created By Nabil Ben Mouina
           </p>
         </div>
       </div>
-      <div class="providers-wrapper w-1/2 h-full">
+      <div
+        class="providers-wrapper w-full md:w-1/2 h-full flex flex-col gap-3 md:gap-0 ml-[20px]"
+      >
         <div
-          class="providers-container w-full h-1/2 rounded-[30px] items-center justify-center flex p-[2px] mb-[10px]"
+          class="providers-container w-full h-1/2 rounded-[30px] flex items-center justify-center p-[2px] mb-2 md:mb-[10px]"
           style="
             background: linear-gradient(
               220deg,
@@ -91,15 +105,16 @@
           "
         >
           <div
-            class="providers w-full h-full bg-[var(--solid)] rounded-[29px] items-center justify-center flex transition-[background] duration-150 hover:bg-[var(--solid-sec)] cursor-pointer"
+            class="providers w-full h-full bg-[var(--solid)] rounded-[29px] flex items-center justify-center transition-[background] duration-150 hover:bg-[var(--solid-sec)] cursor-pointer"
           >
             <svg
               viewBox="0 0 20 20"
               preserveAspectRatio="xMidYMid meet"
               focusable="false"
-              width="80px"
-              height="80px"
+              width="50px"
+              height="50px"
               fill="none"
+              class="md:w-[80px] md:h-[80px]"
             >
               <path
                 d="M19.6 10.23c0-.82-.1-1.42-.25-2.05H10v3.72h5.5c-.15.96-.74 2.31-2.04 3.22v2.45h3.16c1.89-1.73 2.98-4.3 2.98-7.34z"
@@ -121,7 +136,7 @@
           </div>
         </div>
         <div
-          class="providers-container w-full h-[calc(50%_-_10px)] rounded-[30px] items-center justify-center flex p-[2px]"
+          class="providers-container w-full h-[calc(50%_-_10px)] rounded-[30px] flex items-center justify-center p-[2px]"
           style="
             background: linear-gradient(
               220deg,
@@ -134,7 +149,7 @@
           "
         >
           <div
-            class="providers w-full h-full bg-[var(--solid)] rounded-[29px] items-center justify-center flex transition-[background] duration-150 hover:bg-[var(--solid-sec)] cursor-pointer"
+            class="providers w-full h-full bg-[var(--solid)] rounded-[29px] flex items-center justify-center transition-[background] duration-150 hover:bg-[var(--solid-sec)] cursor-pointer"
           >
             <svg
               id="github-icon"
@@ -142,10 +157,11 @@
               viewBox="0 0 24 24"
               version="1.1"
               data-view-component="true"
-              className="octicon octicon-mark-github v-align-middle"
-              width="80px"
-              height="80px"
+              class="octicon octicon-mark-github v-align-middle"
+              width="50px"
+              height="50px"
               fill="none"
+              class="md:w-[80px] md:h-[80px]"
             >
               <path
                 d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"

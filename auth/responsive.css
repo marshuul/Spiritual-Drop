@@ -1,6 +1,25 @@
+@media only screen and (min-width: 1443px) {
+  .auth-main {
+    padding: 110px 100px;
+  }
+  .providers-wrapper {
+    height: 500px;
+  }
+  .providers svg {
+    width: 80px;
+    height: 80px;
+  }
+}
 @media only screen and (max-width: 1443px) {
   .auth-main {
     padding: 110px 100px;
+  }
+  .providers-wrapper {
+    height: 500px;
+  }
+  .providers svg {
+    width: 80px;
+    height: 80px;
   }
 }
 @media only screen and (max-width: 1212px) {
@@ -17,7 +36,9 @@
     text-align: center;
   }
   .providers-wrapper {
+    height: 300px;
     padding-bottom: 10px;
+    margin-left: 0;
   }
   .providers svg {
     width: 50px;
